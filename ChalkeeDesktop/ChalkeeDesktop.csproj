@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Update="View\Dashboard.xaml.cs">
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="View\Info.xaml.cs">
+        <SubType>Code</SubType>
+        <DependentUpon>Info.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Images\shutdown_mo.png" />
+      <None Remove="Images\customer_page.png" />
+      <None Remove="Images\home_page.png" />
+      <None Remove="Images\img_customer.png" />
+      <None Remove="Images\img_home.png" />
+      <None Remove="Images\img_order.png" />
+      <None Remove="Images\img_product.png" />
+      <None Remove="Images\img_setting.png" />
+      <None Remove="Images\img_shipment.png" />
+      <None Remove="Images\img_transaction.png" />
+      <None Remove="Images\order_page.png" />
+      <None Remove="Images\product_page.png" />
+      <None Remove="Images\setting_page.png" />
+      <None Remove="Images\shipment_page.png" />
+      <None Remove="Images\transaction_page.png" />
+      <None Remove="Images\close.png" />
+      <None Remove="Images\shutdown_def.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Images\close_def.png" />
+      <Resource Include="Images\close_def.png" />
+      <None Remove="Images\close_mo.png" />
+      <Resource Include="Images\close_mo.png" />
+      <None Remove="Images\dashboard.png" />
+      <Resource Include="Images\dashboard.png" />
+      <None Remove="Images\timetable.png" />
+      <Resource Include="Images\timetable.png" />
+      <None Remove="Images\info.png" />
+      <Resource Include="Images\info.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="View\Info.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+</Project>
